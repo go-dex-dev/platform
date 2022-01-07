@@ -1,0 +1,37 @@
+{
+  "name": "Contact",
+  "fields": [
+    {
+      "name": "uuid",
+      "type": "string",
+      "length": "40",
+      "unique": true
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "length": "20"
+    },
+    {
+      "name": "phone",
+      "type": "string",
+      "length": "40"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "name": "enabled",
+      "type": "bool",
+      "default": true
+    }
+  ],
+  "relations": [
+    {
+      "name": "company",
+      "type": "company",
+      "relation": "many2one"
+    }
+  ]
+}
