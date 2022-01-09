@@ -1,1 +1,8 @@
+*.md
+*.log
+*.txt
 .git
+.github
+docs
+examples
+Dockerfile
