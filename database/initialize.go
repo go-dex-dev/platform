@@ -7,13 +7,13 @@ import (
 	"strings"
 )
 
-const BuildDbPath = "\\generated\\database"
+const BuildDbPath = "\\src\\database"
 
 var lines []string
 
 func CreateDatabaseScript(projectRootDir string, entities ...string) error {
 	createDbBuildFolders(projectRootDir)
-	currentFileName := "E:\\Go\\src\\github.com\\go-dex-dev\\platform\\database\\create.go"
+	currentFileName := "E:\\Go\\projects\\go-dex-dev\\platform\\database\\create.go"
 	newFileName := projectRootDir + BuildDbPath + "\\create.go"
 
 	err := loadFile(currentFileName)
@@ -49,7 +49,7 @@ func createDbBuildFolders(rootDir string) bool {
 func copyTemplate(entities ...string) {
 	for i, line := range lines {
 		if strings.Contains(line, "//--Entities Import--//") {
-			lines[i] = "\t\"project/generated/domain/entities\""
+			lines[i] = "\t\"project/src/domain/entities\""
 		}
 
 		if strings.Contains(line, "//--Entities Hook--//") {

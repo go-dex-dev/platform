@@ -1,5 +1,6 @@
 go run main.go
-cd example\src\project
+cd ..
+cd examples\project
 build.bat
 cd ..
 cd ..

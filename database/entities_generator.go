@@ -10,9 +10,9 @@ import (
 	"os"
 )
 
-const BuildPath = "\\generated"
-const BuildEntitiesPath = "\\generated\\domain\\entities"
-const SrcEntitiesDefinitionPath = "\\resources\\domain\\entities"
+const BuildPath = "\\src"
+const BuildEntitiesPath = "\\src\\domain\\entities"
+const SrcEntitiesDefinitionPath = "\\model\\domain\\entities"
 
 var projectRootDir string
 
