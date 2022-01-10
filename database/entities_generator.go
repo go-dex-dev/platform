@@ -1,4 +1,4 @@
-package generators
+package database
 
 import (
 	"bufio"
@@ -10,9 +10,9 @@ import (
 	"os"
 )
 
-const BuildPath = "\\build"
-const BuildEntitiesPath = "\\build\\domain\\entities"
-const SrcEntitiesDefinitionPath = "\\src\\domain\\entities"
+const BuildPath = "\\generated"
+const BuildEntitiesPath = "\\generated\\domain\\entities"
+const SrcEntitiesDefinitionPath = "\\resources\\domain\\entities"
 
 var projectRootDir string
 

@@ -71,7 +71,7 @@ func openDatabase() *gorm.DB {
 	var results []Entity
 	db.Find(&results)
 	fmt.Printf("---- %s ----", "word")
-	println("Entities in DB:\n")
+	println("Entities in Database:\n")
 	for _, record := range results {
 		println(record.Name)
 	}

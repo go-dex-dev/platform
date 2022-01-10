@@ -1,0 +1,1 @@
+.\dist\project.exe

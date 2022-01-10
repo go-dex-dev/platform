@@ -1,7 +1,7 @@
-package db
+package database
 
 import (
-	"../domain/entities"
+	//--Entities Import--//
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
@@ -15,8 +15,7 @@ func OpenDatabase() *gorm.DB {
 
 	// Migrate the schema
 	err = db.AutoMigrate(
-		&entities.CompanyEntity{},
-		&entities.ContactEntity{},
+	//--Entities Hook--//
 	)
 
 	if err != nil {

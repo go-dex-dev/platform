@@ -1,4 +1,4 @@
-module platform
+module github.com/go-dex-dev/platform
 
 go 1.17
 
@@ -8,6 +8,7 @@ require (
 )
 
 require (
+	github.com/gobeam/stringy v0.0.5 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.2 // indirect
 	github.com/mattn/go-sqlite3 v1.14.8 // indirect

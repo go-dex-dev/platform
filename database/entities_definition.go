@@ -1,4 +1,4 @@
-package generators
+package database
 
 import "gorm.io/gorm"
 

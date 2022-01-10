@@ -1,4 +1,4 @@
-package generators
+package database
 
 import (
 	"io/ioutil"
@@ -7,14 +7,14 @@ import (
 	"strings"
 )
 
-const BuildDbPath = "\\build\\db"
+const BuildDbPath = "\\generated\\database"
 
 var lines []string
 
 func CreateDatabaseScript(projectRootDir string, entities ...string) error {
 	createDbBuildFolders(projectRootDir)
-	currentFileName := "E:\\Go\\godex-platform\\src\\platform\\generators\\db_generator.go"
-	newFileName := projectRootDir + BuildDbPath + "\\db_generator.go"
+	currentFileName := "E:\\Go\\src\\github.com\\go-dex-dev\\platform\\database\\create.go"
+	newFileName := projectRootDir + BuildDbPath + "\\create.go"
 
 	err := loadFile(currentFileName)
 	if err != nil {
@@ -49,7 +49,7 @@ func createDbBuildFolders(rootDir string) bool {
 func copyTemplate(entities ...string) {
 	for i, line := range lines {
 		if strings.Contains(line, "//--Entities Import--//") {
-			lines[i] = "\t\"../domain/entities\""
+			lines[i] = "\t\"project/generated/domain/entities\""
 		}
 
 		if strings.Contains(line, "//--Entities Hook--//") {
@@ -78,7 +78,7 @@ func loadFile(source string) error {
 }
 
 func setPackage() {
-	lines[0] = "package db"
+	lines[0] = "package database"
 }
 
 /*
